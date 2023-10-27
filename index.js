@@ -1,6 +1,6 @@
 let player = {
     name: "Fray",
-    chips: 0
+    chips: 1000
 }
 
 let cards = []
@@ -47,10 +47,11 @@ function renderGame() {
     } else if (sum === 21) {
         message = "GANHASTE PAH"
         hasBlackJack = true
-        player.chips += 100000000
+        player.chips += 5000
     } else {
         message = "Perdeste burro, embora!"
         isAlive = false
+        player.chips -= 10
     }
     messageEl.textContent = message
 }
